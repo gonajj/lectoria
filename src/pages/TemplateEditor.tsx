@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
-import { Plus, Trash2, GripVertical, ArrowLeft, Save } from 'lucide-react';
+import { Plus, Trash2, ArrowLeft, Save } from 'lucide-react';
 import { getTemplateById, saveTemplate, generateId } from '../store/templates';
 import type { FieldDefinition, FieldType, Template } from '../types';
 

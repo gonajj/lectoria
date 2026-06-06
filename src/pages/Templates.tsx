@@ -1,13 +1,11 @@
 import { useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { Plus, Layers, Pencil, Trash2, Upload, FileText } from 'lucide-react';
 import { getTemplates, deleteTemplate } from '../store/templates';
 import type { Template } from '../types';
 
 export default function Templates() {
-  const navigate = useNavigate();
   const [templates, setTemplates] = useState<Template[]>(() => getTemplates());
-  const [deleting, setDeleting] = useState<string | null>(null);
 
   function handleDelete(id: string, name: string) {
     if (!confirm(`¿Eliminar la plantilla "${name}"? Esta acción no se puede deshacer.`)) return;

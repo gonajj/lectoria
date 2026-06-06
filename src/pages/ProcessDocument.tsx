@@ -4,7 +4,7 @@ import { useDropzone } from 'react-dropzone';
 import { Upload, FileText, X, AlertCircle, Layers, ChevronDown } from 'lucide-react';
 import { getTemplates, saveDocument, generateId } from '../store/templates';
 import { extractFieldsFromPDF } from '../services/gemini';
-import type { Document, Template } from '../types';
+import type { Document } from '../types';
 
 export default function ProcessDocument() {
   const navigate = useNavigate();
